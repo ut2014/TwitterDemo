@@ -24,6 +24,7 @@ buildscript {
 allprojects {
 
     repositories {
+    
         jcenter()
         maven { url 'https://maven.fabric.io/public' }
     }
@@ -31,7 +32,9 @@ allprojects {
 
 module gradle加内容如下：
 buildscript {
+
     repositories {
+    
         maven { url 'https://maven.fabric.io/public' }
     }
 
@@ -39,11 +42,14 @@ buildscript {
         classpath 'io.fabric.tools:gradle:1.+'
     }
 }
+
 apply plugin: 'com.android.application'
 
 repositories {
+
     maven { url 'https://maven.fabric.io/public' }
 }
+
 
 apply plugin: 'io.fabric'
 
