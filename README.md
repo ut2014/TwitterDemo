@@ -1,12 +1,14 @@
-ËµÃ÷£º
-¸ù¾İ¹Ù·½µÄ²½ÖèÒÆ¶¯¶Ë Òª°²×° ²å¼ş£¬¾­¹ıÊµÑé£¬ÆäÊµºÜ²»·½±ã£¡
+è¯´æ˜ï¼š
+æ ¹æ®å®˜æ–¹çš„æ­¥éª¤ç§»åŠ¨ç«¯ è¦å®‰è£… æ’ä»¶ï¼Œç»è¿‡å®éªŒï¼Œå…¶å®å¾ˆä¸æ–¹ä¾¿ï¼
 
-ÏÖ×Ü½á¼òµ¥²½ÖèÈçÏÂ£º
-Ö÷ÒªÊÇÖ¸Android
-ÔÚproject gradleÄÚÈİÈçÏÂ£º
+ç°æ€»ç»“ç®€å•æ­¥éª¤å¦‚ä¸‹ï¼š
+ä¸»è¦æ˜¯æŒ‡Android
+åœ¨project gradleå†…å®¹å¦‚ä¸‹ï¼š
 
 buildscript {
+
     repositories {
+
         jcenter()
         maven { url 'https://maven.fabric.io/public' }
     }
@@ -26,7 +28,7 @@ allprojects {
     }
 }
 
-module gradle¼ÓÄÚÈİÈçÏÂ£º
+module gradleåŠ å†…å®¹å¦‚ä¸‹ï¼š
 buildscript {
     repositories {
         maven { url 'https://maven.fabric.io/public' }
@@ -45,38 +47,38 @@ repositories {
 apply plugin: 'io.fabric'
 
 dependencies {
-//Õâ¸öÊÇºËĞÄÊÇ±ØĞë¼ÓµÄ
+//è¿™ä¸ªæ˜¯æ ¸å¿ƒæ˜¯å¿…é¡»åŠ çš„
  compile('com.twitter.sdk.android:twitter:2.2.0@aar') {
         transitive = true;
     }
-    //twitter ±ÀÀ£±¨¸æ·ÖÎö°ü
+    //twitter å´©æºƒæŠ¥å‘Šåˆ†æåŒ…
    /* compile('com.crashlytics.sdk.android:crashlytics:2.6.5@aar') {
         transitive = true;
     }*/
-    //twitter sharing°ü
+    //twitter sharingåŒ…
     compile('com.twitter.sdk.android:tweet-composer:2.2.0@aar') {
         transitive = true;
     }
 }
 
-È»ºóÔÚAndroidManifest.xmlÌí¼Ó fabric apiKey£¡
+ç„¶ååœ¨AndroidManifest.xmlæ·»åŠ  fabric apiKeyï¼
 <meta-data
             android:name="io.fabric.ApiKey"
             android:value="593dceb79933219ca082dc4c269d25e712117a78" />
             
-ÌØ±ğÌáÊ¾£ºtwitter Òª×¢²á¶ş¸öÕËºÅ fabricÕËºÅÓëtwitterÕËºÅ
+ç‰¹åˆ«æç¤ºï¼štwitter è¦æ³¨å†ŒäºŒä¸ªè´¦å· fabricè´¦å·ä¸twitterè´¦å·
 
-ÔÚtwitter´´½¨ÕËºÅĞÂ½¨×Ô¼ºµÄÓ¦ÓÃ£¬¼ÇÏÂTWITTER_KEY£¬TWITTER_SECRET£¡
-ÔÚactivity³õÊ¼»¯ÒÔµÇÂ¼ÎªÀı
-private static final String TWITTER_KEY = "×¢²áµÄkey";
-private static final String TWITTER_SECRET = "×¢²áµÄsecret";
+åœ¨twitteråˆ›å»ºè´¦å·æ–°å»ºè‡ªå·±çš„åº”ç”¨ï¼Œè®°ä¸‹TWITTER_KEYï¼ŒTWITTER_SECRETï¼
+åœ¨activityåˆå§‹åŒ–ä»¥ç™»å½•ä¸ºä¾‹
+private static final String TWITTER_KEY = "æ³¨å†Œçš„key";
+private static final String TWITTER_SECRET = "æ³¨å†Œçš„secret";
 
 TwitterAuthConfig authConfig = new TwitterAuthConfig(TWITTER_KEY, TWITTER_SECRET);
 Fabric.with(this, new Twitter(authConfig),new TweetComposer());
 
-ÒÔÉÏ¾ÍÍê³É³õÊ¼»¯ÁË£¡£¡Fabric.with()±ØĞëÔÚµÚÒ»ĞĞ£¬setContentView()Ö®Ç°£¡
+ä»¥ä¸Šå°±å®Œæˆåˆå§‹åŒ–äº†ï¼ï¼Fabric.with()å¿…é¡»åœ¨ç¬¬ä¸€è¡Œï¼ŒsetContentView()ä¹‹å‰ï¼
 
-ÏêÇéÇë¿´¹ÙÍøÎÄµµ£¬Ìí¼ÓĞèÒªµÄ Ä£¿é
+è¯¦æƒ…è¯·çœ‹å®˜ç½‘æ–‡æ¡£ï¼Œæ·»åŠ éœ€è¦çš„ æ¨¡å—
 https://docs.fabric.io/android/twitter/installation.html
 
 
