@@ -70,15 +70,19 @@ dependencies {
 
 在twitter创建账号新建自己的应用，记下TWITTER_KEY，TWITTER_SECRET！
 在activity初始化以登录为例
+
 private static final String TWITTER_KEY = "注册的key";
 private static final String TWITTER_SECRET = "注册的secret";
+
 
 TwitterAuthConfig authConfig = new TwitterAuthConfig(TWITTER_KEY, TWITTER_SECRET);
 Fabric.with(this, new Twitter(authConfig),new TweetComposer());
 
+
 以上就完成初始化了！！Fabric.with()必须在第一行，setContentView()之前！
 
-详情请看官网文档，添加需要的 模块
+详情请看官网文档，添加需要的模块
+
 https://docs.fabric.io/android/twitter/installation.html
 
 
