@@ -22,6 +22,7 @@ buildscript {
 }
 
 allprojects {
+
     repositories {
         jcenter()
         maven { url 'https://maven.fabric.io/public' }
@@ -47,21 +48,26 @@ repositories {
 apply plugin: 'io.fabric'
 
 dependencies {
+
 //这个是核心是必须加的
  compile('com.twitter.sdk.android:twitter:2.2.0@aar') {
         transitive = true;
     }
+    
     //twitter 崩溃报告分析包
    /* compile('com.crashlytics.sdk.android:crashlytics:2.6.5@aar') {
         transitive = true;
     }*/
+    
     //twitter sharing包
     compile('com.twitter.sdk.android:tweet-composer:2.2.0@aar') {
         transitive = true;
     }
+    
 }
 
 然后在AndroidManifest.xml添加 fabric apiKey！
+
 <meta-data
             android:name="io.fabric.ApiKey"
             android:value="593dceb79933219ca082dc4c269d25e712117a78" />
