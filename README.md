@@ -81,13 +81,16 @@ dependencies {
 特别提示：twitter 要注册二个账号 fabric账号与twitter账号
 
 在twitter创建账号新建自己的应用，记下TWITTER_KEY，TWITTER_SECRET！
+
 在activity初始化以登录为例
 
 private static final String TWITTER_KEY = "注册的key";
+
 private static final String TWITTER_SECRET = "注册的secret";
 
 
 TwitterAuthConfig authConfig = new TwitterAuthConfig(TWITTER_KEY, TWITTER_SECRET);
+
 Fabric.with(this, new Twitter(authConfig),new TweetComposer());
 
 
